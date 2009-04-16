@@ -1,0 +1,16 @@
+<h1>Editing macro_tweet</h1>
+
+<% form_for(@macro_tweet) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @macro_tweet %> |
+<%= link_to 'Back', macro_tweets_path %>
