@@ -12,6 +12,18 @@ pre {
   font-size: 11px;
 }
 
+p {
+  margin: 13px;
+  border-bottom: 4px dotted #999;
+  padding: 10px;
+  font-size: 11px;
+}
+
+p span {
+  font-size: 10px;
+  font-style: italic;
+}
+
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }

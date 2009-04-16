@@ -1,20 +1,8 @@
-<h1>Listing macro_tweets</h1>
-
-<table>
-  <tr>
-    <th>Body</th>
-  </tr>
-
 <% @macro_tweets.each do |macro_tweet| %>
-  <tr>
-    <td><%=h macro_tweet.body %></td>
-    <td><%= link_to 'Show', macro_tweet %></td>
-    <td><%= link_to 'Edit', edit_macro_tweet_path(macro_tweet) %></td>
-    <td><%= link_to 'Destroy', macro_tweet, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <p>
+    <%=h macro_tweet.body %>
+    <br />
+    <span>- <%= time_ago_in_words( macro_tweet.created_at ) %> ago</span>
+  </p>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New macro_tweet', new_macro_tweet_path %>
