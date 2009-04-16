@@ -1,11 +1,11 @@
 default_run_options[:pty] = true
 set :application, "macrotweets.port49.com"
 set :repository,  "git@github.com:port49/macrotweets.port49.com.git"
+
 set :scm, :git
 set :ssh_options, { :forward_agent => true }
 
 set :runner, 'macrotweets'
-set :branch, 'macrotweets'
 set :deploy_via, :remote_cache
 
 # If you aren't deploying to /u/apps/#{application} on the target
