@@ -2,11 +2,11 @@ class MacroTweetsController < ApplicationController
   # GET /macro_tweets
   # GET /macro_tweets.xml
   def index
-    @macro_tweets = MacroTweet.all
+    @macro_tweets = MacroTweet.find( :all, :order => 'created_at DESC' )
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @macro_tweets }
+      format.xml 
     end
   end
 
